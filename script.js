@@ -10,8 +10,8 @@ function bindImage(img, chl) {
   img.chl = chl;
   img.innerHTML = '';
   let qr = new QRCode(img, {
-    width: 360,
-    height: 360,
+    width: 100,
+    height: 100,
     useSvg: true,
     correctLevel: QRCode.CorrectLevel.L
   });
@@ -79,7 +79,7 @@ function init() {
   add.className = 'qr-add';
   add.textContent = '添加二维码生成器';
   add.addEventListener('click', () => {
-    content.insertBefore(createQR('voilà'), add)
+    content.insertBefore(createQR('selier'), add)
   });
   let share = document.querySelector('button.qr-share');
   share.addEventListener('click', (e) => {
